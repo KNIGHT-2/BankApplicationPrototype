@@ -38,7 +38,6 @@ public class Program {
                 currentAccount.depositMoney(scan.nextDouble());
 
                 accounts.add(currentAccount);
-
             }else if(menuOption.equals("o")||menuOption.equals("O")) {
 
                 boolean loopGetAccountNumber = true;
@@ -79,7 +78,9 @@ public class Program {
                     }
                 }
             }
-            System.out.println(accounts.toString());
+            for(Account acc : accounts) {
+            	System.out.println(acc.toString());
+            }
         }
     }
 }
